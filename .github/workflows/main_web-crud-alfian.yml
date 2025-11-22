@@ -56,9 +56,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3407A5B533604BFC9EB9E0C27EB47264 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_53C4821CB23F44F3A17109AE018BB5CD }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_39030FD3AD954771BC33A658B2A7D793 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E527BD104B734224A71FC139357E9B64 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_684C7EA456C04995A4BC87E662253773 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E9698677609A4111B08DF1EB6B0CEACA }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -67,6 +67,4 @@ jobs:
           app-name: 'web-crud-alfian'
           slot-name: 'Production'
           package: .
-
-
           
