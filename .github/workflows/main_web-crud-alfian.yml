@@ -67,4 +67,6 @@ jobs:
           app-name: 'web-crud-alfian'
           slot-name: 'Production'
           package: .
+
+
           
