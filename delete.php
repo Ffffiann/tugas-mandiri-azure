@@ -1,6 +1,5 @@
-<?php
+<?php 
 include 'config.php';
 $id = $_GET['id'];
-$conn->query("DELETE FROM users WHERE id=$id");
+mysqli_query($conn, "DELETE FROM mahasiswa WHERE id=$id");
 header("Location: index.php");
-?>
