@@ -1,11 +1,12 @@
 <?php
-$host = getenv('DB_HOST') ?: 'localhost';
-$user = getenv('DB_USER') ?: 'root';
-$pass = getenv('DB_PASS') ?: '';
-$db   = getenv('DB_NAME') ?: 'db_webcrud';
+$host = "web-tugas-alfian.mysql.database.azure.com";
+$user = "alfian";
+$pass = "Hakimalfian22";
+$db   = "db-webcrud";
 
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conn = mysqli_connect($host, $user, $pass, $db);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
