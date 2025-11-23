@@ -1,14 +1,14 @@
-<?php
-include 'config.php';
-if($_POST){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $conn->query("INSERT INTO users(name,email) VALUES('$name','$email')");
+<?php include 'config.php';
+
+if (isset($_POST['submit'])) {
+    $nama = $_POST['nama'];
+    mysqli_query($conn, "INSERT INTO mahasiswa(nama) VALUES('$nama')");
     header("Location: index.php");
+    exit;
 }
 ?>
-<form method='POST'>
-Nama: <input name='name'><br>
-Email: <input name='email'><br>
-<button>Simpan</button>
+
+<form method="POST">
+    Nama: <input type="text" name="nama">
+    <button type="submit" name="submit">Simpan</button>
 </form>
